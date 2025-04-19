@@ -1,0 +1,149 @@
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #bbb;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: white;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-list a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover {
+  color: white;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.payment-icons i {
+  font-size: 1.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks if needed */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1rem;
+  }
+
+  .footer-title,
+  .footer-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .footer-text,
+  .footer-list a,
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+}

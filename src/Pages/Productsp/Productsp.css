@@ -1,0 +1,8 @@
+.product_wrapper{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.9em 1.2em;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
