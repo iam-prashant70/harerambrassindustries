@@ -1,45 +1,12 @@
 import React, { useState } from 'react';
 import './Testimonials.css';
+import testimonials from '../Data/Testimonials';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "John Doe",
-      position: "CEO, TechCorp",
-      image: "images/tap.jpg",
-      text: "Outstanding products that have optimized our operations!",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Sarah Lee",
-      position: "Operations Manager, FactoryPro",
-      image: "images/meeting.jpg",
-      text: "High-quality and reliable solutions for our business needs.",
-      rating: 4
-    },
-    {
-      id: 3,
-      name: "Ravi Kumar",
-      position: "CTO, DevSolutions",
-      image: "/images/client3.jpg",
-      text: "The tech they provided was top-notch and support was stellar.",
-      rating: 5
-    },
-    {
-      id: 4,
-      name: "Linda Smith",
-      position: "Product Manager, BuildX",
-      image: "/images/client4.jpg",
-      text: "Reliable team and high-quality results every time.",
-      rating: 5
-    }
-  ];
+  const totalSlides = testimonials.length;
 
-  const totalSlides = Math.ceil(testimonials.length / 2);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev > 0 ? prev - 1 : prev));
@@ -53,17 +20,63 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="testimonials-section testi-section">
-      <div style={{marginBottom: "10vh"}} className="text-center testi-header">
+      <div style={{ marginBottom: "10vh" }} className="text-center testi-header">
         <h2 className="section-title testi-title">What Our Clients Say</h2>
         <div className="underline testi-underline"></div>
       </div>
 
       <div className="testimonials-slider-wrapper testi-slider-wrapper">
-        <button className="slider-btn left testi-btn-left" onClick={handlePrev}>
-          &#8592;
+
+        <button className="slider-btn testi-btn-left" onClick={handlePrev}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width={24}
+            height={24}
+            fill="none"
+            className="arrow-icon left"
+          >
+            <path
+              d="M20.0001 11.9998L4.00012 11.9998"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
-        <button className="slider-btn right testi-btn-right" onClick={handleNext}>
-          &#8594;
+
+        <button className="slider-btn testi-btn-right" onClick={handleNext}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width={24}
+            height={24}
+            fill="none"
+            className="arrow-icon"
+          >
+            <path
+              d="M20.0001 11.9998L4.00012 11.9998"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
 
         <div
@@ -73,8 +86,8 @@ export default function Testimonials() {
           }}
         >
           {testimonials.map((testimonial) => (
-            <div className="testimonial testi-item" >
-              <div className="testimonial-content testi-content" key={testimonial.id}>
+            <div className="testimonial testi-item" key={testimonial.id}>
+              <div className="testimonial-content testi-content">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -87,6 +100,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
 
         <div className="testimonial-dots testi-dots">
           {Array.from({ length: totalSlides }).map((_, index) => (

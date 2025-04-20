@@ -59,31 +59,28 @@ export default function About() {
           </div>
           <div className="about-content">
             <div className="about-text">
-              <h3>Leading the Future of Innovation</h3>
-              <p>We are a technology-driven company committed to delivering outstanding digital solutions that drive business success.</p>
-              <div className="about-details">
-                <h4>Our Mission</h4>
-                <p>To innovate and provide the best technological solutions that help businesses thrive in a digital world.</p>
+              <h3>About us</h3>
+              <p>We are a leading brass parts manufacturing company dedicated to delivering high-quality, precision-engineered components for a wide range of industries. With years of experience and a strong foundation in metal craftsmanship, our company has earned a reputation for reliability, durability, and innovation. From the selection of raw materials to the final finishing, every process is handled with utmost care to ensure superior quality and customer satisfaction.</p>
+              <br /><div className="about-details">
+                <h3>Our Specialization</h3>
+                <p>Our core specialization lies in manufacturing customized brass components such as brass electrical parts, sanitary fittings, automotive parts, gas fittings, inserts, terminals, and precision-turned parts. We cater to both domestic and international markets, providing products that meet global standards in terms of quality, finish, and performance. With modern machinery, skilled technicians, and a commitment to excellence, we ensure timely delivery and complete client satisfaction in every order.</p>
               </div>
-              <div className="about-details">
-                <h4>Our Vision</h4>
-                <p>To be a global leader in cutting-edge technology, transforming industries with smart and efficient solutions.</p>
-              </div>
+
+              <br />
               <div className="stats-grid">
                 <div className="stat-box">
-                  <div className="stat-number">10+</div>
+                  <div className="stat-number">22+</div>
                   <div className="stat-label">Years Experience</div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-number">500+</div>
-                  <div className="stat-label">Projects Completed</div>
+                  <div className="stat-number">100+</div>
+                  <div className="stat-label">Products Completed</div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-number">300+</div>
+                  <div className="stat-number">60+</div>
                   <div className="stat-label">Satisfied Clients</div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -108,28 +105,28 @@ export default function About() {
       </section>
       <section id="about" className="about-section">
 
-<div className="containernotworking">
+        <div className="containernotworking">
 
-<div className="about-content">
-    <div className="about-text">
-      <h3>Leading the Future of Innovation</h3>
-      <p>We are a technology-driven company committed to delivering outstanding digital solutions that drive business success.</p>
-      <div className="about-details">
-        <h4>Our Mission</h4>
-        <p>To innovate and provide the best technological solutions that help businesses thrive in a digital world.</p>
-      </div>
-      <div className="about-details">
-        <h4>Our Vision</h4>
-        <p>To be a global leader in cutting-edge technology, transforming industries with smart and efficient solutions.</p>
-      </div>
-    </div>
-  </div>
-  <div className="about-image">
-    <img src="images/meeting.jpg" alt="About Company" />
-  </div>
+          <div className="about-content">
+            <div className="about-text">
+              <h3>Leading the Future of Innovation</h3>
+              <p>We are a technology-driven company committed to delivering outstanding digital solutions that drive business success.</p>
+              <div className="about-details">
+                <h4>Our Mission</h4>
+                <p>To innovate and provide the best technological solutions that help businesses thrive in a digital world.</p>
+              </div>
+              <div className="about-details">
+                <h4>Our Vision</h4>
+                <p>To be a global leader in cutting-edge technology, transforming industries with smart and efficient solutions.</p>
+              </div>
+            </div>
+          </div>
+          <div className="about-image">
+            <img src="images/meeting.jpg" alt="About Company" />
+          </div>
 
-</div>
-</section>
+        </div>
+      </section>
     </>
   )
 }

@@ -20,42 +20,19 @@
     padding: 80px 20px;
 }
 
-.slider-wrapper {
-    overflow-x: hidden;
-    padding-bottom: 20px;
+.arrow-btn svg {
+  color: #ac25eb;
+  transition: color 0.3s ease;
 }
 
-.slider {
-    display: flex;
-    gap: 20px;
-    min-width: max-content;
+.arrow-btn:hover svg {
+  color: white;
 }
 
-.product-card {
-    width: 280px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.left-arrow svg {
+  transform: rotate(180deg);
 }
 
-.product-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.product-image img:hover {
-    transform: scale(1.05);
-}
 
 .product-content {
     padding: 16px;
@@ -78,8 +55,9 @@
     color: #ac25eb;
     border: 2px solid #ac25eb;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    width: 5vw;
     transition: all 0.3s ease-in-out;
     height: 50px;
 }
@@ -132,14 +110,7 @@
     color: white;
     font-size: 24px;
 }
-
   
-  .slider {
-    display: flex;
-    gap: 20px;
-  }
-  
-
 .slider-wrapper {
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -163,13 +134,37 @@
     padding-bottom: 20px;
 }
 
+
 .product-card {
-    flex: 0 0 calc(25% - 15px);
-    /* 4 per view */
-    min-width: 260px;
-    max-width: 280px;
-    box-sizing: border-box;
+    /* width: 100%; */
+    min-width: 330px;
+    overflow: hidden;
+    height: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
+
+.product-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 1200px) {
     .product-card {
       flex: 0 0 calc(33.333% - 15px); /* 3 per view */
@@ -192,13 +187,19 @@
     }
   
     .scroll-buttons {
-      flex-direction: column;
+      /* flex-direction: column; */
       gap: 10px;
     }
   
     .view-details {
       width: 100px;
       font-size: 1rem;
+    }
+    .products-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
   }
   

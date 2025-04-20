@@ -1,115 +1,24 @@
 import React, { useRef, useEffect } from "react";
 import "./Product.css";
 import ProductCard from "../ProductCard/ProductCard";
+import originalProducts from "../Data/Products";
 
 const Products = () => {
   const sliderRef = useRef(null);
 
-  const originalProducts = [
-    {
-      id: 1,
-      name: "Industrial Robot",
-      image: "images/brass-hex-insert.jpg",
-      description: "Advanced robotics for automation and efficiency."
-    },
-    {
-      id: 2,
-      name: "AI Monitoring System",
-      image: "images/brass-moulding-insert.jpg",
-      description: "Smart monitoring powered by AI insights."
-    },
-    {
-      id: 3,
-      name: "Precision Tools",
-      image: "/images/tools.jpg",
-      description: "High-quality precision tools for industries."
-    },
-    {
-      id: 4,
-      name: "Laser Cutter",
-      image: "/images/tools.jpg",
-      description: "Precision laser cutting machines for modern factories."
-    },
-    {
-      id: 5,
-      name: "Smart Sensor",
-      image: "/images/tools.jpg",
-      description: "Environment-aware sensors for smart automation."
-    },
-    {
-      id: 6,
-      name: "Conveyor Belt System",
-      image: "/images/tools.jpg",
-      description: "Efficient material handling system for warehouses."
-    },
-    {
-      id: 7,
-      name: "Assembly Bot",
-      image: "/images/tools.jpg",
-      description: "Automated assembly line solution."
-    },
-    {
-      id: 8,
-      name: "Welding Machine",
-      image: "/images/tools.jpg",
-      description: "Robotic precision welding."
-    }
-  ];
+  const itemWidth = 300; // adjust this if your card size changes
 
-  const clonedProducts = [
-    ...originalProducts.slice(-4), // Clone last 4 to the start
-    ...originalProducts,
-    ...originalProducts.slice(0, 4) // Clone first 4 to the end
-  ];
-
-  const itemWidth = 300; // Approx (with gap), adjust if needed
-  const visibleItems = 4;
-  const totalCloneWidth = itemWidth * visibleItems;
-
-  useEffect(() => {
+  const handleScrollRight = () => {
     const slider = sliderRef.current;
-    if (!slider) return;
-  
-    // Go to real content (after first 4 clones)
-    slider.scrollLeft = totalCloneWidth;
-  
-    const handleScroll = () => {
-      const maxScroll = slider.scrollWidth - slider.offsetWidth;
-  
-      if (slider.scrollLeft <= 0) {
-        // Disable smooth temporarily
-        slider.style.scrollBehavior = "auto";
-        slider.scrollLeft = maxScroll - totalCloneWidth * 2;
-        // Re-enable smooth
-        requestAnimationFrame(() => {
-          slider.style.scrollBehavior = "smooth";
-        });
-      }
-  
-      if (slider.scrollLeft >= maxScroll - 1) {
-        slider.style.scrollBehavior = "auto";
-        slider.scrollLeft = totalCloneWidth;
-        requestAnimationFrame(() => {
-          slider.style.scrollBehavior = "smooth";
-        });
-      }
-    };
-  
-    slider.addEventListener("scroll", handleScroll);
-    return () => slider.removeEventListener("scroll", handleScroll);
-  }, []);
-  
+    slider.scrollBy({ left: itemWidth, behavior: "smooth" });
+  };
 
-const handleScrollRight = () => {
-  const slider = sliderRef.current;
-  slider.scrollBy({ left: itemWidth, behavior: "smooth" });
-};
+  const handleScrollLeft = () => {
+    const slider = sliderRef.current;
+    slider.scrollBy({ left: -itemWidth, behavior: "smooth" });
+  };
 
-const handleScrollLeft = () => {
-  const slider = sliderRef.current;
-  slider.scrollBy({ left: -itemWidth, behavior: "smooth" });
-};
-
+  // Drag to scroll with mouse
   useEffect(() => {
     const slider = sliderRef.current;
     let isDown = false;
@@ -155,33 +64,45 @@ const handleScrollLeft = () => {
   }, []);
 
   return (
-    <>
-      <section id="products" className="products-section">
-        <div className="text-center">
-          <h2 className="section-title">Our Products</h2>
-          <div className="underline"></div>
-        </div>
-        <div className="container">
-
-          <div className="proslid slider-wrapper" ref={sliderRef}>
-            <div className="slider">
-              {clonedProducts.map((product, index) => (
-                <ProductCard key={index} data={product} />
-              ))}
-            </div>
+    <section id="products" className="products-section">
+      <div className="text-center">
+        <h2 className="section-title">Our Products</h2>
+        <div className="underline"></div>
+      </div>
+      <div className="container">
+        <div className="proslid slider-wrapper" ref={sliderRef}>
+          <div className="slider">
+            {originalProducts.map((product, index) => (
+              <ProductCard key={index} data={product} />
+            ))}
           </div>
+        </div>
+      </div>
+      <div
+        className="scroll-buttons text-center"
+        style={{
+          marginTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "10px"
+        }}
+      >
+        <button className="view-details arrow-btn left-arrow" onClick={handleScrollLeft}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} fill="none">
+            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
 
-        </div>
-        <div className="scroll-buttons text-center" style={{ marginTop: "20px", display: "flex", justifyContent: "center", gap: "10px" }}>
-          <button className="view-details" onClick={handleScrollLeft}>
-            ←
-          </button>
-          <button className="view-details" onClick={handleScrollRight}>
-            →
-          </button>
-        </div>
-      </section>
-    </>
+        <button className="view-details arrow-btn" onClick={handleScrollRight}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} fill="none">
+            <path d="M20.0001 11.9998L4.00012 11.9998" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+      </div>
+    </section>
   );
 };
 

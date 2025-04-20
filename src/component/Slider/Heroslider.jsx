@@ -70,11 +70,11 @@ const HeroSlider = () => {
           <div className="slide" key={index}>
             <div className="overlay"></div>
             <img src={slide.image} alt={slide.title} className="hero-image" />
-            {/* <div className="hero-content">
+            <div className="hero-content">
               <h1>{slide.title}</h1>
               <p>{slide.description}</p>
               <button className="primary-button">Discover More</button>
-            </div> */}
+            </div>
           </div>
         ))}
       </div>
