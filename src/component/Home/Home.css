@@ -488,10 +488,11 @@ h3 {
         margin-top: 10vh;
     } */
 
-    .aboutthefeatures{
+    .aboutthefeatures {
         height: auto;
         box-sizing: border-box;
     }
+
     .about-content,
     .servicesimage {
         width: 100%;
@@ -502,7 +503,7 @@ h3 {
     }
 
     .containeronhomenewone {
-        flex-direction: column; 
+        flex-direction: column;
     }
 }
 
@@ -510,5 +511,16 @@ h3 {
     .servicesimage {
         width: 100%;
         height: fit-content !important;
+    }
+}
+
+@media (max-width: 333px) {
+    .about-content{
+        margin-top: 10vh;
+    }
+}
+@media (max-width: 370px) {
+    .about-content{
+        margin-top: 10vh;
     }
 }
