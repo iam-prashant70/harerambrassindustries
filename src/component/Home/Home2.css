@@ -103,7 +103,8 @@
 
 .aboutthefeatures {
     width: 90vw;
-    height: 100vh;
+    margin-top: 10vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,4 +166,17 @@
     color: #9747FF;
     width: fit-content;
     margin-top: 4vh;
+}
+
+
+
+@media (max-width: 600px) {
+    .whatareyou {
+       font-size: 0.7em;
+    }
+    .whatareyoubtn{
+        font-size: 0.9em;
+        width: fit-content !important;
+        text-wrap: nowrap;
+    }
 }

@@ -129,31 +129,6 @@ export default function About() {
           ))}
         </div>
       </section>
-      <section id="about" className="about-section">
-
-        <div className="containernotworking">
-
-          <div className="about-content">
-            <div className="about-text">
-              <h3>Leading the Future of Innovation</h3>
-              <p>We are a technology-driven company committed to delivering outstanding digital solutions that drive business success.</p>
-              <div className="about-details">
-                <h4>Our Mission</h4>
-                <p>To innovate and provide the best technological solutions that help businesses thrive in a digital world.</p>
-              </div>
-              <div className="about-details">
-                <h4>Our Vision</h4>
-                <p>To be a global leader in cutting-edge technology, transforming industries with smart and efficient solutions.</p>
-              </div>
-            </div>
-          </div>
-          <div className="about-image">
-            <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
-            <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
-          </div>
-
-        </div>
-      </section>
     </>
   )
 }

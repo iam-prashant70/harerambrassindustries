@@ -1,6 +1,6 @@
 .servicessection {
     width: 90vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -30,3 +30,17 @@
         flex-direction: column;
     }
 }
+
+.idkwhattodohereatanytimeontheroadorhomebro {
+    width: 90vw;
+    text-align: left;
+
+}
+.idkwhattodohereatanytimeontheroadorhomebro span{
+    font-weight: 600;
+    font-size: 1.6em;
+}
+.idkwhattodohereatanytimeontheroadorhomebro p{
+    opacity: 0.7;
+}
+

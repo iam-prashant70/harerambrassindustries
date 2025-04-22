@@ -181,29 +181,29 @@
 
 @media (max-width: 600px) {
     .product-card {
-        flex: 0 0 100%;
-        /* 1 per view */
+        width: 100%;
+        max-width: 370px;
     }
-
     .slider-wrapper {
         padding: 0 10px;
-        /* reduce side space */
     }
-
     .scroll-buttons {
-        /* flex-direction: column; */
         gap: 10px;
     }
-
     .view-details {
         width: 100px;
         font-size: 1rem;
     }
-
     .products-section {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+}
+@media (max-width: 477px) {
+    .product-card {
+        width: 100%;
+        max-width: 100%;
     }
 }

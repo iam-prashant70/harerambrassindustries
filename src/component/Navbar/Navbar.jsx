@@ -25,7 +25,9 @@ const Navbar = () => {
       <div className="containernav">
         <div className="logo">
           <Link to="/">
-            <h1>Hareram Brass</h1>
+            <div className="logoatheader">
+              <img src="images/logofull.png" alt="logo" />
+            </div>
           </Link>
         </div>
 

@@ -23,10 +23,7 @@ const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
-
   const totalSlides = slides.length;
-
-  // Cloned slides: original + copy of first
   const extendedSlides = [...slides, slides[0]];
 
   useEffect(() => {
@@ -46,14 +43,23 @@ const HeroSlider = () => {
     setIsTransitioning(true);
   };
 
-  // Handle transition end (to loop smoothly)
   const handleTransitionEnd = () => {
+    // Reset to 0 without animation when hitting the cloned slide
     if (currentIndex === totalSlides) {
-      // Reset without transition
       setIsTransitioning(false);
       setCurrentIndex(0);
     }
   };
+
+  // Fix the transition glitch when jumping to 0
+  useEffect(() => {
+    if (!isTransitioning) {
+      const timeout = setTimeout(() => {
+        setIsTransitioning(true);
+      }, 50); // brief delay to re-enable transitions
+      return () => clearTimeout(timeout);
+    }
+  }, [isTransitioning]);
 
   return (
     <section className="hero-slider-wrapper">
@@ -79,15 +85,12 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Bottom Buttons */}
       <div className="slider-buttons">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`slider-btn ${
-              index === (currentIndex % totalSlides) ? "active" : ""
-            }`}
+            className={`slider-btn ${index === currentIndex % totalSlides ? "active" : ""}`}
           ></button>
         ))}
       </div>

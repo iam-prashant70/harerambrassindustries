@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container" style={{marginTop :"10vh"}}>
+            <div className="container" style={{ marginTop: "10vh" }}>
                 <div className="footer-grid">
                     <div className="footer-section">
-                        <h3 className="footer-title">Hareram Brass Industries</h3>
+                        <div style={{ display: "flex", gap: "1em" }}>
+                            <div className="logoatfooter">
+                                <img src="images/logowhite.png" alt="logo footer" />
+                            </div>
+                            <h3 style={{ color: "white" }}>Hareram Brass<br />Industries</h3>
+                        </div>
                         <p className="footer-text">
                             We are a leading brass parts manufacturing company dedicated to delivering high-quality, precision-engineered components for a wide range of industries since 2003.
                         </p>
@@ -36,7 +41,7 @@ const Footer = () => {
                         <ul className="footer-list">
                             <li>
                                 <Link to="/products">
-                                Brass taps
+                                    Brass taps
                                 </Link>
                             </li>
                             <li>
@@ -46,22 +51,22 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link to="/products">
-                                faucets
+                                    faucets
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/products">
-                                Pipe connectors and unions  
+                                    Pipe connectors and unions
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/products">
-                                Compression fittings
+                                    Compression fittings
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/products">
-                                Shower fittings
+                                    Shower fittings
                                 </Link>
                             </li>
                         </ul>

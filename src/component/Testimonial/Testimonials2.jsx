@@ -97,7 +97,7 @@ export default function Testimonials2() {
 
       <div className="bottomoftestibtns" >
 
-        <p>h</p>
+        <p>What Our Clients Say Defines Who We Are</p>
 
         <div style={{display : "flex" , gap: "1em"}}>
           <button

@@ -7,6 +7,15 @@
   height: 70vh; */
 }
 
+.logoatfooter{
+  width: 60px;
+  height: 60px;
+}
+.logoatfooter img{
+  width: 100%;
+  object-fit: cover;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

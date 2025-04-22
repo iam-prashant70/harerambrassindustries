@@ -9,7 +9,15 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 50;
 }
-
+.logoatheader{
+  padding: 5px;
+  height: 50px;
+  width: fit-content;
+}
+.logoatheader img{
+  height: 100%;
+  object-fit: cover;
+}
 /* Container inside header */
 .containernav {
   width: 90%;

@@ -16,7 +16,7 @@ const Home = () => {
             <HeroSlider />
 
             <section id="about" className="about-section">
-                <div className="containernotworking">
+                <div className="containernotworking" style={{marginTop : "0px"}}>
                     <div className="about-image">
                         <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
                         <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
@@ -29,7 +29,7 @@ const Home = () => {
                                 <h3>Our Specialization</h3>
                                 <p>Our core specialization lies in manufacturing customized brass components such as brass electrical parts, sanitary fittings, automotive parts, gas fittings, inserts, terminals, and precision-turned parts. We cater to both domestic and international markets, providing products that meet global standards in terms of quality, finish, and performance. With modern machinery, skilled technicians, and a commitment to excellence, we ensure timely delivery and complete client satisfaction in every order.</p>
                             </div>
-                            <button className="primary-button" style={{marginTop : "3vh"}}>
+                            <button className="primary-button" style={{ marginTop: "3vh" }}>
                                 <Link to="/about">
                                     Learn More
                                 </Link>
@@ -67,7 +67,7 @@ const Home = () => {
                         </div>
                         <h2>Cutting-Edge Technology</h2>
                         <p style={{ color: "#000000", opacity: "0.5" }}>
-                            Innovative solutions with the latest technology.
+                        We integrate cutting-edge technology into every step of our brass manufacturing process, ensuring precision and unmatched quality. Our advanced machinery meets the highest industry standards, exceeding customer expectations.
                         </p>
 
                         <Link to="/services" className='linkathomeforfeaturesokay'>
@@ -107,7 +107,7 @@ const Home = () => {
                         </div>
                         <h2>Customer Commitment</h2>
                         <p style={{ color: "#000000", opacity: "0.5" }}>
-                            Dedicated to providing excellent service.
+                            Our commitment to customers is at the heart of everything we do. We prioritize quality, reliability, and timely delivery to meet your unique needs. By building long-term partnerships, we ensure every product exceeds expectations.
                         </p>
                         <Link to="/services" className='linkathomeforfeaturesokay'>
                             learn more
@@ -143,7 +143,7 @@ const Home = () => {
 
             <Testimonials2 />
 
-            <div className='container' style={{flexDirection : "column" , gap: "0", marginTop : "4em"}}>
+            <div className='container' style={{ flexDirection: "column", gap: "0", marginTop: "4em" }}>
                 <h2 className="section-title">Contact Us</h2>
                 <p>
                     Have questions or need more information? Get in touch with us today.
@@ -155,7 +155,7 @@ const Home = () => {
 
             <div className="whatareyoub">
                 <div className="whatareyou">
-                    <h2 style={{fontSize : "2em"}}>Feel free to ask any questions. <br /> Contact us today!</h2>
+                    <h2 style={{ fontSize: "2em" }}>Feel free to ask any questions. <br /> Contact us today!</h2>
                     <a href="#contact" className='whatareyoubtn'>Contact Us</a>
                 </div>
             </div>
