@@ -21,7 +21,7 @@ export default function Contactpage() {
         const data = {
             service_id: serviceid,
             template_id: templateid,
-            user_id: publickey,
+            user_id: publicid,
             template_params: {
                 from_name: uname,
                 from_email: uemail,
