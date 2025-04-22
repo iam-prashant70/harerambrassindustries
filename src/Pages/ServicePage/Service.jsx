@@ -1,10 +1,7 @@
-import React from 'react'
-import Navbar from '../../component/Navbar/Navbar'
-import { Link } from 'react-router-dom';
-
-export default function About() {
-
-
+import React, { useState, useEffect } from 'react'
+import "./Service.css"
+import Navbar from '../../component/Navbar/Navbar';
+export default function Service() {
   const TechnologyIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={50} height={50} color={"#000000"} fill={"none"} >
       <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" stroke="currentColor" strokeWidth="1.5" />
@@ -33,64 +30,30 @@ export default function About() {
       id: 1,
       icon: <TechnologyIcon />,
       title: "Cutting-Edge Technology",
-      description: "Innovative solutions with the latest technology."
+      description: "We use advanced technology to deliver innovative, efficient, and future-ready solutions."
     },
     {
       id: 2,
       icon: <SecurityIcon />,
       title: "Reliable & Secure",
-      description: "Ensuring durability and top-notch security."
+      description: "Built with precision and quality to ensure long-lasting performance and dependable security."
     },
     {
       id: 3,
       icon: <AgreementIcon />,
       title: "Customer Commitment",
-      description: "Dedicated to providing excellent service."
+      description: "We prioritize customer satisfaction through dedicated support and tailored service."
     }
+    
   ];
   return (
     <>
-      <Navbar />
 
-      <section id="about" className="about-section">
-
-        <div className="containernotworking">
-          <div className="about-image">
-            <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
-            <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
-          </div>
-          <div className="about-content">
-            <div className="about-text">
-              <h3>About us</h3>
-              <p>We are a leading brass parts manufacturing company dedicated to delivering high-quality, precision-engineered components for a wide range of industries. With years of experience and a strong foundation in metal craftsmanship, our company has earned a reputation for reliability, durability, and innovation. From the selection of raw materials to the final finishing, every process is handled with utmost care to ensure superior quality and customer satisfaction.</p>
-              <br /><div className="about-details">
-                <h3>Our Specialization</h3>
-                <p>Our core specialization lies in manufacturing customized brass components such as brass electrical parts, sanitary fittings, automotive parts, gas fittings, inserts, terminals, and precision-turned parts. We cater to both domestic and international markets, providing products that meet global standards in terms of quality, finish, and performance. With modern machinery, skilled technicians, and a commitment to excellence, we ensure timely delivery and complete client satisfaction in every order.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="aboutthefeaturesgrid" style={{ width: "90vw", borderRadius: "1em", marginTop: "10vh" }}>
-        <div className="aboutthefeaturesgridcards">
-          <h1 className="aboutthefeaturesgridheading">22+</h1>
-          <span>Years Experience</span>
-        </div>
-        <hr />
-        <div className="aboutthefeaturesgridcards">
-          <h1 className="aboutthefeaturesgridheading">100+</h1>
-          <span>Products Completed</span>
-        </div>
-        <hr />
-        <div className="aboutthefeaturesgridcards">
-          <h1 className="aboutthefeaturesgridheading">60+</h1>
-          <span>Satisfied Clients</span>
-        </div>
-      </div>
-
-      <section className="features-section">
-        <h2 className="section-title" style={{ marginTop: "3vh", marginBottom: "6vh" }}>Why Choose Us</h2>
+    <Navbar /> 
+    <br />
+    <br /><br /> <br />
+      <section className="servicessection">
+        <h1 className="section-title">Our services</h1>
         <div className="servicesCardsec">
           {features.map(feature => (
             <div key={feature.id} className="servicecards">
@@ -99,59 +62,8 @@ export default function About() {
               </div>
               <h2>{feature.title}</h2>
               <br /> <p style={{ color: "#000000", opacity: "0.5" }}>{feature.description}</p>
-              <Link to="/services" className='linkathomeforfeaturesokay'>
-                learn more
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width={35}
-                  height={40}
-                  fill="none"
-                  style={{ color: "#9747FF" }}
-                >
-                  <path
-                    d="M20.0001 11.9998L4.00012 11.9998"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
             </div>
           ))}
-        </div>
-      </section>
-      <section id="about" className="about-section">
-
-        <div className="containernotworking">
-
-          <div className="about-content">
-            <div className="about-text">
-              <h3>Leading the Future of Innovation</h3>
-              <p>We are a technology-driven company committed to delivering outstanding digital solutions that drive business success.</p>
-              <div className="about-details">
-                <h4>Our Mission</h4>
-                <p>To innovate and provide the best technological solutions that help businesses thrive in a digital world.</p>
-              </div>
-              <div className="about-details">
-                <h4>Our Vision</h4>
-                <p>To be a global leader in cutting-edge technology, transforming industries with smart and efficient solutions.</p>
-              </div>
-            </div>
-          </div>
-          <div className="about-image">
-            <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
-            <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
-          </div>
-
         </div>
       </section>
     </>

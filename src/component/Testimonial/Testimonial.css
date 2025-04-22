@@ -1,0 +1,44 @@
+.testimonialstwoholder {
+    width: 90vw;
+    display: flex;
+    gap: 2em;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+.testimonialsdesign{
+    height: 70vh;
+}
+  
+.testimonialstwoholder::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.btnsattestimonialsscoll{
+    outline: none;
+    border: none;
+    border-radius: 10em;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.btnactivescroll{
+    background: #ac25eb;
+    color: white;
+}
+.btnnotactivescroll{
+    background: transparent;
+    border: 2.2px solid rgb(92, 92, 92);
+    color: rgb(92, 92, 92);
+}
+.bottomoftestibtns{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 1em;
+    margin-top: 3vh;
+}

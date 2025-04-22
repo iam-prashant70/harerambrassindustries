@@ -1,16 +1,16 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container">
+            <div className="container" style={{marginTop :"10vh"}}>
                 <div className="footer-grid">
                     <div className="footer-section">
-                        <h3 className="footer-title">IndusTech</h3>
+                        <h3 className="footer-title">Hareram Brass Industries</h3>
                         <p className="footer-text">
-                            Leading provider of advanced industrial solutions, committed to
-                            innovation and excellence since 2005.
+                            We are a leading brass parts manufacturing company dedicated to delivering high-quality, precision-engineered components for a wide range of industries since 2003.
                         </p>
                         <div className="social-icons">
                             <a href="#" className="social-link"><i className="fa-brands fa-facebook-f"></i></a>
@@ -32,13 +32,68 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-section">
+                        <h4 className="footer-subtitle">Products</h4>
+                        <ul className="footer-list">
+                            <li>
+                                <Link to="/products">
+                                Brass taps
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/products">
+                                    valves
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/products">
+                                faucets
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/products">
+                                Pipe connectors and unions  
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/products">
+                                Compression fittings
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/products">
+                                Shower fittings
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="footer-section">
                         <h4 className="footer-subtitle">Services</h4>
                         <ul className="footer-list">
-                            <li><a href="#">Industrial Automation</a></li>
-                            <li><a href="#">Process Optimization</a></li>
-                            <li><a href="#">Energy Management</a></li>
-                            <li><a href="#">Safety Solutions</a></li>
-                            <li><a href="#">Maintenance Services</a></li>
+                            <li>
+                                <Link to="/services">
+                                    Industrial Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/services">
+                                    Process Optimization
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/services">
+                                    Energy Management
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/services">
+                                    Safety Solutions
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/services">
+                                    Maintenance Services
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -48,14 +103,13 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; 2025 IndusTech Solutions. All rights reserved.</p>
-                <div className="footer-links">
+                <p>&copy; 2025 Hareram Brass Industries. All rights reserved.</p>
+                {/* <div className="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Cookie Policy</a>
-                </div>
+                </div> */}
             </div>
-            {/* Back to Top Button */}
             <a href="https://wa.me/9712580007" className="back-to-top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ffffff"} fill={"none"} >
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />

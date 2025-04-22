@@ -3,6 +3,8 @@
   color: white;
   padding: 4rem 1rem;
   width: 100%;
+  /* max-height: fit-content;
+  height: 70vh; */
 }
 
 .footer-grid {

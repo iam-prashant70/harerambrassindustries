@@ -7,14 +7,13 @@ import Productsp from './Pages/Productsp/Productsp'
 import Contactus from './Pages/Contact/Contactus'
 import Footer from './component/Footer/Footer'
 import ProductDetails from './Pages/Details/ProductDetails'
-import Inquiry from './Pages/Inquiry/Inquiry'
 import ScrollToTop from './component/Scrolltop/Scrolltotop'
+import Service from './Pages/ServicePage/Service'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter >
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,11 +22,8 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/productdetails/:id" element={<ProductDetails />} />
-          {/* <Route path="/inquiry/:id" element={<Inquiry />} />
-        <Route path="/inquiry" element={<Inquiry />} /> */}
+          <Route path="/services" element={<Service />} />
         </Routes>
-      </BrowserRouter>
-
       <Footer />
 
     </>

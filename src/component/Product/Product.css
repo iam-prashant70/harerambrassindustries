@@ -7,7 +7,7 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-}   
+}
 
 .section-description {
     color: #666;
@@ -21,16 +21,16 @@
 }
 
 .arrow-btn svg {
-  color: #ac25eb;
-  transition: color 0.3s ease;
+    color: #ac25eb;
+    transition: color 0.3s ease;
 }
 
 .arrow-btn:hover svg {
-  color: white;
+    color: white;
 }
 
 .left-arrow svg {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 
@@ -82,9 +82,9 @@
 }
 
 .feature-card {
-    background: #f9fafb;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 13px rgba(3, 7, 18, 0.05);
     text-align: center;
     width: 100%;
     transition: box-shadow 0.3s ease-in-out;
@@ -110,7 +110,7 @@
     color: white;
     font-size: 24px;
 }
-  
+
 .slider-wrapper {
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -137,13 +137,13 @@
 
 .product-card {
     /* width: 100%; */
-    min-width: 330px;
+    max-width: 330px;
     overflow: hidden;
-    height: 320px;
+    height: 390px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
     overflow: hidden;
+    box-shadow: 0px 0px 12px rgba(3, 7, 18, 0.07);
     display: flex;
     position: relative;
     flex-direction: column;
@@ -167,39 +167,43 @@
 
 @media (max-width: 1200px) {
     .product-card {
-      flex: 0 0 calc(33.333% - 15px); /* 3 per view */
+        flex: 0 0 calc(33.333% - 15px);
+        /* 3 per view */
     }
-  }
-  
-  @media (max-width: 900px) {
+}
+
+@media (max-width: 900px) {
     .product-card {
-      flex: 0 0 calc(50% - 15px); /* 2 per view */
+        flex: 0 0 calc(50% - 15px);
+        /* 2 per view */
     }
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .product-card {
-      flex: 0 0 100%; /* 1 per view */
+        flex: 0 0 100%;
+        /* 1 per view */
     }
-  
+
     .slider-wrapper {
-      padding: 0 10px; /* reduce side space */
+        padding: 0 10px;
+        /* reduce side space */
     }
-  
+
     .scroll-buttons {
-      /* flex-direction: column; */
-      gap: 10px;
+        /* flex-direction: column; */
+        gap: 10px;
     }
-  
+
     .view-details {
-      width: 100px;
-      font-size: 1rem;
+        width: 100px;
+        font-size: 1rem;
     }
+
     .products-section {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-  }
-  
+}

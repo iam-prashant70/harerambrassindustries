@@ -8,6 +8,11 @@
   /* font-weight: <weight>; */
   /* font-style: normal; */
 }
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
 #root{
     display: flex;
     align-items: center;
@@ -16,12 +21,17 @@
     width: 100vw;
     
 }
+::selection{
+    background-color: #ac25eb;
+    color: white;
+}
 body,html{
     width: 100%;
     overflow-x: hidden;
-    background: #fbfbfb;
+    background: #f3f4f6;
 }
 a{
     text-decoration: none;
     text-transform: capitalize;
+    -webkit-user-drag: none;
 }

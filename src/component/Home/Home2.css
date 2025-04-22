@@ -1,0 +1,168 @@
+.whatareyoub {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    transition: padding 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatareyou {
+    border: 0px;
+    padding: 3em 5%;
+    background: white;
+    width: 90vw;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2em;
+    transform: translate(0, 12vh);
+    transition: border-radius 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.whatareyoubtn{
+    border-radius: 0.7em;
+    height: fit-content;
+    padding: 0.7em 1.5em;
+    background: #ac25eb;
+    color: white;
+}
+.reviewcard p {
+    opacity: 0.7;
+    line-height: 1.7;
+}
+
+.reviewcard {
+    border-radius: 1em;
+    /* width: 100% !important; */
+    max-width: 450px;
+    max-height: fit-content;
+    min-height: 230px;
+    gap: 10px;
+    padding: 1.5em;
+    background: white;
+    transition: all 1s ease;
+    text-wrap: wrap;
+    box-shadow: 0px 0px 12px rgba(3, 7, 18, 0.05);
+
+}
+
+.reviewcardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prof_review {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile_on_review {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 500px;
+    background: #000;
+    overflow: hidden;
+}
+
+.profile_on_review img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .reviewcard {
+        width: 100%;
+        max-width: 330px;
+    }
+}
+
+/*-------------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+
+    .aboutthefeaturesgrid,
+    .aboutthefeaturesflexcards2 {
+        flex-direction: column;
+    }
+
+    .atffcl {
+        border-radius: 0em 0em 0em 0em;
+    }
+
+    .atffcr {
+        border-radius: 0em 0em 2em 2em;
+    }
+}
+
+.aboutthefeatures {
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutthefeaturesgrid {
+    width: 100%;
+    background: #1C1818;
+    border-radius: 2em 2em 0 0;
+    padding: 2.5em;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    gap: 1.5em;
+}
+
+.aboutthefeaturesflexcard {
+    width: 100%;
+    padding: 2.5em;
+    background: white;
+}
+
+.atffcl {
+    border-radius: 0em 0em 0em 2em;
+}
+
+.atffcr {
+    border-radius: 0em 0em 2em 0em;
+}
+
+.aboutthefeaturesflexcards2 {
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.aboutthefeaturesgrid hr {
+    border: 2px solid #8d8d8d;
+}
+
+.aboutthefeaturesgridcards {
+    /* background: #000; */
+    width: 100%;
+    text-align: center;
+}
+
+.aboutthefeaturesgridheading {
+    font-size: 2.5em;
+}
+
+.linkathomeforfeaturesokay {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #9747FF;
+    width: fit-content;
+    margin-top: 4vh;
+}

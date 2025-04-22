@@ -85,7 +85,7 @@ export default function Testimonials() {
             transform: `translateX(-${activeIndex * 100}%)`,
           }}
         >
-          {testimonials.map((testimonial) => (
+          {/* {testimonials.map((testimonial) => (
             <div className="testimonial testi-item" key={testimonial.id}>
               <div className="testimonial-content testi-content">
                 <img
@@ -98,8 +98,29 @@ export default function Testimonials() {
                 <p className="testimonial-text testi-text">"{testimonial.text}"</p>
               </div>
             </div>
+          ))} */}
+
+          {testimonials.map((testimonial) => (
+            <div className="testimonial testi-item" key={testimonial.id}>
+              <div className="reviewcard">
+                <div className="reviewcardHeader">
+                  <div className="prof_review">
+                    <div className="profile_on_review">
+                      <img src={testimonial.image} alt={testimonial.name} />
+                    </div>
+                    <div>
+                      <span style={{ fontSize: "1.3em", fontWeight: 600 }}>{testimonial.name}</span> <br />
+                      <span>{testimonial.position}</span>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                {testimonial.text}
+              </div>
+            </div>
           ))}
         </div>
+
 
 
         <div className="testimonial-dots testi-dots">
