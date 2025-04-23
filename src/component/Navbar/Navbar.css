@@ -8,16 +8,31 @@
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 50;
+  animation: headerinout 1s forwards 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translateY(-7vh);
 }
-.logoatheader{
+@keyframes headerinout {
+  0%{
+    transform: translateY(-7vh);
+
+  }
+  100%{
+  transform: translateY(0);
+
+  }
+}
+
+.logoatheader {
   padding: 5px;
   height: 50px;
   width: fit-content;
 }
-.logoatheader img{
+
+.logoatheader img {
   height: 100%;
   object-fit: cover;
 }
+
 /* Container inside header */
 .containernav {
   width: 90%;
@@ -173,4 +188,118 @@
 .nav-link:hover::after,
 .mobile-nav-link:hover::after {
   transform: scaleX(1);
+}
+
+
+.overlayreturns {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 2000;
+  position: fixed;
+  left: 0;
+  animation: okayoverlay 0.5s forwards ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+.overlayreturns::before {
+  width: 100vw;
+  height: 5vh;
+  background-color: #ac25eb;
+  content: '';
+  position: absolute;
+  top: -5vh;
+}
+
+.overlayreturns img {
+  animation: okayoverlayimg 0.5s forwards 0.5s;
+  opacity: 0;
+}
+
+@keyframes okayoverlayimg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes okayoverlay {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+.overlayreturnsactive {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 5000;
+  position: fixed;
+  animation: overlayreturnsactive 1s forwards cubic-bezier(0.77, 0, 0.175, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0 !important;
+}
+
+.overlayreturnsactive::before {
+  width: 100vw;
+  height: 5vh;
+  background-color: #ac25eb;
+  content: '';
+  position: absolute;
+  bottom: -5vh;
+}
+
+.overlayreturnsactive img {
+  animation: okayoverlayimgactive 1s forwards 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  opacity: 1;
+}
+
+@keyframes okayoverlayimgactive {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+
+@keyframes overlayreturnsactive {
+  0% {
+    height: 100vh;
+    transform: translateY(0);
+  }
+  100% {
+    height: 0;
+    transform: translateY(-10vh);
+  }
+}
+
+
+
+/* Add this in your global CSS file */
+html.full-height,
+body.full-height,
+#root.full-height {
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  /* transition: none !important; */
 }

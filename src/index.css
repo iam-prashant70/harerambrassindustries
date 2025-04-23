@@ -19,6 +19,7 @@ img{
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    position: relative;
     
 }
 ::selection{
@@ -26,6 +27,7 @@ img{
     color: white;
 }
 body,html{
+    position: relative;
     width: 100%;
     overflow-x: hidden;
     background: #f3f4f6;
@@ -34,4 +36,27 @@ a{
     text-decoration: none;
     text-transform: capitalize;
     -webkit-user-drag: none;
+}
+
+.brudandbread{
+    width: 90vw;
+    margin-top: 10vh;
+}
+.brudandbread a{
+    color: black;
+}
+.brudandbread a:hover{
+    color: #ac25eb;
+}
+.brudandbread .activeonbread{
+    color: #ac25eb;
+}
+
+.divbreaad{
+    display: flex;
+    gap: 1em;
+    width: fit-content;
+    background: white;
+    border-radius: 0.7em;
+    padding: 1em 2em;
 }

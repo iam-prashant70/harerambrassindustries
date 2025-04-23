@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import "./Service.css"
 import Navbar from '../../component/Navbar/Navbar';
+import { Link } from 'react-router-dom';
+
 export default function Service() {
+  useEffect(() => {
+    document.title = 'Services | Hareram Brass Industries';
+  }, []);
+
   const TechnologyIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={50} height={50} color={"#000000"} fill={"none"} >
       <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" stroke="currentColor" strokeWidth="1.5" />
@@ -22,7 +28,6 @@ export default function Service() {
       <path d="M8.5 6.75003L2 6.75003" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
-
 
   const features = [
     {
@@ -45,12 +50,43 @@ export default function Service() {
 
 
     }
-
   ];
+
   return (
     <>
-      <Navbar />
-      <section
+      <div className="overlayreturnsactive">
+        <img src="images/logofull.png" alt="loading" />
+      </div>
+      <Navbar /> <br />
+      <span className='brudandbread'>
+        <div className="divbreaad">
+          <Link to="/">Home</Link> /
+          <Link to="/services" className='activeonbread'>Services</Link>
+        </div>
+      </span>
+      <br />
+
+      <section className="servicessection">
+        <h1 className="section-title">Our services</h1>
+        <div className="servicesCardsec">
+          {features.map((feature , index) => (
+            <div key={feature.id} className="servicecards fade-up"
+            style={{
+              animationDelay: `${0.2 + index * 0.2}s`, 
+              transform: 'translateY(60px)',
+            }}
+            >
+              <div className="feature-icon" style={{ marginBottom: "1rem" }}>
+                {feature.icon}
+              </div>
+              <h2>{feature.title}</h2>
+              <br /> <p style={{ color: "#000000", opacity: "0.5" }}>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='fade-up'
         style={{
           width: "90vw",
           padding: "5vh 0vw",
@@ -59,7 +95,9 @@ export default function Service() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          animationDelay: '0.5s', transform: 'translateY(100px)'
         }}
+       
       >
         <h1 style={{ fontSize: "2rem", marginBottom: "2vh" }}>
           About Our Services
@@ -90,21 +128,6 @@ export default function Service() {
         </p>
       </section>
 
-      <section className="servicessection">
-        <h1 className="section-title">Our services</h1>
-        <div className="servicesCardsec">
-          {features.map(feature => (
-            <div key={feature.id} className="servicecards">
-              <div className="feature-icon" style={{ marginBottom: "1rem" }}>
-                {feature.icon}
-              </div>
-              <h2>{feature.title}</h2>
-              <br /> <p style={{ color: "#000000", opacity: "0.5" }}>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <br />
 
       <section id="about" style={{ width: "90vw" }}>
         <div className="containernotworking" style={{ marginBottom: "0" }}>
@@ -146,6 +169,8 @@ export default function Service() {
         </div>
       </section>
 
+      <br />
+      <br />
       <section id="about" style={{ width: "90vw" }}>
         <div className="containernotworking" style={{ marginBottom: "0" }}>
           <div className="servicesimage" >

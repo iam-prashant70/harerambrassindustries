@@ -7,16 +7,27 @@ import HeroSlider from '../Slider/Heroslider';
 import Testimonials2 from '../Testimonial/Testimonials2';
 import Contactpage from '../../Pages/Contact/Contactpage';
 import { Link } from 'react-router-dom';
+import DemoCarousel from '../Slider/DemoCarousel';
 
 const Home = () => {
     return (
         <>
+
+
+
+            <div className="overlayreturnsactive" style={{animationDuration : 3}}>
+                <img src="images/logofull.png" alt="loading" />
+            </div>
+
+
             <Navbar />
 
-            <HeroSlider />
+            {/* <HeroSlider /> */}
+
+            <DemoCarousel />
 
             <section id="about" className="about-section">
-                <div className="containernotworking" style={{marginTop : "0px"}}>
+                <div className="containernotworking" style={{ marginTop: "0px" }}>
                     <div className="about-image">
                         <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
                         <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
@@ -67,7 +78,7 @@ const Home = () => {
                         </div>
                         <h2>Cutting-Edge Technology</h2>
                         <p style={{ color: "#000000", opacity: "0.5" }}>
-                        We integrate cutting-edge technology into every step of our brass manufacturing process, ensuring precision and unmatched quality. Our advanced machinery meets the highest industry standards, exceeding customer expectations.
+                            We integrate cutting-edge technology into every step of our brass manufacturing process, ensuring precision and unmatched quality. Our advanced machinery meets the highest industry standards, exceeding customer expectations.
                         </p>
 
                         <Link to="/services" className='linkathomeforfeaturesokay'>

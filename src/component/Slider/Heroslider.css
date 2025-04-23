@@ -76,3 +76,25 @@
     height: 97vh;
   }
 }
+
+
+.carousel .slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+
+.carousel .slide img {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel .carousel-slider {
+  overflow: hidden !important;
+}
+
+.carousel .control-arrow {
+  z-index: 10;
+}

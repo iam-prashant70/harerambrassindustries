@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export default function Contactpage() {
 
@@ -31,32 +33,64 @@ export default function Contactpage() {
             }
         };
 
+
         try {
             const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
             console.log(res.data);
+
+            toast.success('Email is Sent successfully !', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                // transition: Bounce,
+            });
+
             setUname('');
             setUemail('');
             setUmsg('');
             setUsub('');
         } catch (error) {
             console.log('Error sending email:', error);
+            toast.error('something went wrong ,try again letter', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                // transition: Bounce,
+            });
         }
     };
 
     return (
         <>
 
-            <section id="contact">
+            <div className="overlayreturnsactive">
+                <img src="images/logofull.png" alt="loading" />
+            </div>
+            <ToastContainer />
+
+            <section id="contact" style={{ textWrap: "wrap" }} >
                 <div className="containeronhomenewone">
-                    <div className="contactformhere">
+                    <div className="contactformhere fade-up"
+                        style={{ animationDelay: '0.5s', transform: 'translateY(100px)' }}
+                    >
                         <h3 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
                         <form onSubmit={sendEmail}>
                             <input type="text" placeholder="Full Name" className="input-field"
                                 value={uname} onChange={(e) => setUname(e.target.value)} />
-                            
+
                             <input type="text" placeholder="Subject" className="input-field"
                                 value={usub} onChange={(e) => setUsub(e.target.value)} />
-                            
+
                             <input type="email" placeholder="Email Address" className="input-field"
                                 value={uemail} onChange={(e) => setUemail(e.target.value)} />
 
@@ -66,9 +100,10 @@ export default function Contactpage() {
                             <button type="submit" className="btn-primary">Send Message</button>
                         </form>
                     </div>
-
                     <div className="contactu_infoi">
-                        <div className="contact-info">
+                        <div className="contact-info fade-up"
+                            style={{ animationDelay: '0.6s', transform: 'translateY(40px)' }}
+                        >
                             <h3 className="">Contact Information</h3>
                             <div className="info-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ac25eb"} fill={"none"} >
@@ -112,7 +147,8 @@ export default function Contactpage() {
                         </div>
 
                         <iframe
-                            className="map-placeholder"
+                             style={{ animationDelay: '0.8s', transform: 'translateY(40px)' }}
+                            className="map-placeholder fade-up"
                             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58995.10720908078!2d70.04815354673605!3d22.459335385712897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s0%2C253%2FA%2C%20Phase%20-%202%2C%20GIDC%20Dared%20jamnagar%20-%20361004!5e0!3m2!1sen!2sin!4v1744709461875!5m2!1sen!2sin"
                             allowFullScreen=""
                             loading="lazy"

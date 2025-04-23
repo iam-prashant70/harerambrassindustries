@@ -42,3 +42,16 @@
     gap: 1em;
     margin-top: 3vh;
 }
+
+
+
+@media (max-width: 333px) {
+    .about-content{
+        margin-top: 10vh;
+    }
+}
+@media (max-width: 370px) {
+    .about-content{
+        margin-top: 10vh;
+    }
+}

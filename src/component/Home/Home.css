@@ -515,12 +515,59 @@ h3 {
 }
 
 @media (max-width: 333px) {
-    .about-content{
+    .about-content {
         margin-top: 10vh;
     }
+
+    .contact-info {
+        font-size: 0.7em;
+    }
 }
+
 @media (max-width: 370px) {
-    .about-content{
+    .about-content {
         margin-top: 10vh;
     }
 }
+
+@media (max-width: 900px) {
+
+    .hroimg1 {
+        transform: translate(-5em, -4em);
+    }
+    
+    .hroimg2 {
+        transform: translate(-14em, 5em);
+
+    }
+    
+}
+@media (max-width: 335px) {
+
+    .hroimg1 {
+        transform: translate(-3em, 0em);
+    }
+
+    .hroimg2 {
+        transform: translate(-5em, -14em);
+    }
+
+}
+
+
+@keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  

@@ -170,13 +170,16 @@
 
 
 
-@media (max-width: 600px) {
-    .whatareyou {
-       font-size: 0.7em;
-    }
-    .whatareyoubtn{
-        font-size: 0.9em;
-        width: fit-content !important;
-        text-wrap: nowrap;
+@media (max-width: 333px) {
+    .reviewcard {
+        max-width: 300px;
+        width: 100%;
     }
 }
+@media (max-width: 370px) {
+    .reviewcard {
+        max-width: 330px;
+        width: 100%;
+    }
+}
+

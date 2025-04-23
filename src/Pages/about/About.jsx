@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../component/Navbar/Navbar'
 import { Link } from 'react-router-dom';
 
 export default function About() {
 
+  useEffect(() => {
+    document.title = 'About-Us | Hareram Brass Industries';
+  }, []);
 
   const TechnologyIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={50} height={50} color={"#000000"} fill={"none"} >
@@ -13,12 +16,11 @@ export default function About() {
 
   );
 
-  const SecurityIcon = (props) => (
+  const Recycle02Icon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={50} height={50} color={"#000000"} fill={"none"} >
-      <path d="M21 11.1833V8.28029C21 6.64029 21 5.82028 20.5959 5.28529C20.1918 4.75029 19.2781 4.49056 17.4507 3.9711C16.2022 3.6162 15.1016 3.18863 14.2223 2.79829C13.0234 2.2661 12.424 2 12 2C11.576 2 10.9766 2.2661 9.77771 2.79829C8.89839 3.18863 7.79784 3.61619 6.54933 3.9711C4.72193 4.49056 3.80822 4.75029 3.40411 5.28529C3 5.82028 3 6.64029 3 8.28029V11.1833C3 16.8085 8.06277 20.1835 10.594 21.5194C11.2011 21.8398 11.5046 22 12 22C12.4954 22 12.7989 21.8398 13.406 21.5194C15.9372 20.1835 21 16.8085 21 11.1833Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M10.8386 19.7631H16.4671C19.3324 19.7631 20.7651 19.7631 21.4622 19.0038C21.6578 18.7907 21.8093 18.544 21.9087 18.2766C22.2627 17.3239 21.567 16.1237 20.1754 13.7234M10.8386 19.7631L13.7564 17.5262M10.8386 19.7631L13.7564 22M18.4896 10.8154L15.507 5.6705C14.2306 3.4687 13.5924 2.36781 12.7003 2.10134C12.248 1.96622 11.7634 1.96622 11.3111 2.10134C10.419 2.36781 9.78081 3.4687 8.50438 5.6705M18.4896 10.8154L15.0117 9.50645M18.4896 10.8154L19.0588 7.27638M6.81856 8.57849L3.73542 13.8968C2.43531 16.1395 1.78525 17.2608 2.06354 18.1613C2.17186 18.5119 2.36819 18.8316 2.63534 19.0926C3.32163 19.7631 4.66018 19.7631 7.33728 19.7631M6.81856 8.57849L7.36018 12.1215M6.81856 8.57849L3.33053 9.8626" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
-
   const AgreementIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={50} height={50} color={"#000000"} fill={"none"} >
       <path d="M22 6.75003H19.2111C18.61 6.75003 18.3094 6.75003 18.026 6.66421C17.7426 6.5784 17.4925 6.41168 16.9923 6.07823C16.2421 5.57806 15.3862 5.00748 14.961 4.87875C14.5359 4.75003 14.085 4.75003 13.1833 4.75003C11.9571 4.75003 11.1667 4.75003 10.6154 4.97839C10.0641 5.20675 9.63056 5.6403 8.76347 6.50739L8.00039 7.27047C7.80498 7.46588 7.70727 7.56359 7.64695 7.66005C7.42335 8.01764 7.44813 8.47708 7.70889 8.80854C7.77924 8.89796 7.88689 8.98459 8.10218 9.15785C8.89796 9.79827 10.0452 9.73435 10.7658 9.00945L12 7.76789H13L19 13.8036C19.5523 14.3592 19.5523 15.2599 19 15.8155C18.4477 16.3711 17.5523 16.3711 17 15.8155L16.5 15.3125M13.5 12.2947L16.5 15.3125M16.5 15.3125C17.0523 15.8681 17.0523 16.7689 16.5 17.3244C15.9477 17.88 15.0523 17.88 14.5 17.3244L13.5 16.3185M13.5 16.3185C14.0523 16.874 14.0523 17.7748 13.5 18.3304C12.9477 18.8859 12.0523 18.8859 11.5 18.3304L10 16.8214M13.5 16.3185L11.5 14.3185M9.5 16.3185L10 16.8214M10 16.8214C10.5523 17.377 10.5523 18.2778 10 18.8334C9.44772 19.3889 8.55229 19.3889 8 18.8334L5.17637 15.9509C4.59615 15.3586 4.30604 15.0625 3.93435 14.9062C3.56266 14.75 3.14808 14.75 2.31894 14.75H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -33,33 +35,48 @@ export default function About() {
       id: 1,
       icon: <TechnologyIcon />,
       title: "Cutting-Edge Technology",
-      description: "Innovative solutions with the latest technology."
+      description: "We integrate cutting-edge technology into every step of our brass manufacturing process, ensuring precision and unmatched quality."
     },
     {
       id: 2,
-      icon: <SecurityIcon />,
-      title: "Reliable & Secure",
-      description: "Ensuring durability and top-notch security."
+      icon: <Recycle02Icon />,
+      title: "Recyclable",
+      description: "Brass is 100% recyclable, reducing waste and conserving resources. By reusing materials, we lower energy consumption and minimize our environmental footprint."
     },
     {
       id: 3,
       icon: <AgreementIcon />,
       title: "Customer Commitment",
-      description: "Dedicated to providing excellent service."
+      description: "Our commitment to customers is at the heart of everything we do. We prioritize quality, reliability, and timely delivery to meet your unique needs."
+
+
     }
   ];
   return (
     <>
+      <div className="overlayreturnsactive">
+        <img src="images/logofull.png" alt="loading" />
+      </div>
       <Navbar />
 
-      <section id="about" className="about-section">
+      <span className='brudandbread'>
+        <div className="divbreaad">
+          <Link to="/">Home</Link> /
+          <Link to="/about" className='activeonbread'>About</Link>
+        </div>
+      </span>
 
+      <section id="about" className="about-section fade-up"
+        style={{
+          animationDelay: '0.5s', transform: 'translateY(100px)'
+        }}
+        >
         <div className="containernotworking">
           <div className="about-image">
             <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
             <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
           </div>
-          <div className="about-content">
+          <div className="about-content" >
             <div className="about-text">
               <h3>About us</h3>
               <p>We are a leading brass parts manufacturing company dedicated to delivering high-quality, precision-engineered components for a wide range of industries. With years of experience and a strong foundation in metal craftsmanship, our company has earned a reputation for reliability, durability, and innovation. From the selection of raw materials to the final finishing, every process is handled with utmost care to ensure superior quality and customer satisfaction.</p>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation,Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./ProductDetails.css";
 import originalProducts from "../../component/Data/Products";
 import Navbar from '../../component/Navbar/Navbar'
@@ -16,19 +16,48 @@ const ProductDetails = () => {
     setProduct(foundProduct);
   }, [id]);
 
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Hareram Brass Industries`;
+    }
+  }, [product]);
+
+
   if (!product) return <p style={{ padding: "20px" }}>Loading product...</p>;
+
 
   return (
     <>
-      <Navbar />
-      <div className="product-details-container">
-        
-        <div className="product-details-image">
+
+      <div className="overlayreturnsactive">
+        <img src="images/logofull.png" alt="loading" />
+      </div>
+      <Navbar /> <br />
+      <span className='brudandbread'>
+        <div className="divbreaad">
+          <Link to="/">Home</Link> /
+          <Link to="/products">Products</Link> /
+          <span className='activeonbread'>{product.name}</span>
+        </div>
+      </span>
+
+
+      <div className="product-details-container "
+     
+      >
+
+        <div className="product-details-image fade-up" 
+         style={{
+          animationDelay: '0.5s', transform: 'translateY(100px)'
+        }}>
           <img src={product.image} alt={product.name} />
         </div>
-        <div className="product-details-content">
+        <div className="product-details-content fade-up"
+        style={{
+          animationDelay: '0.8s', transform: 'translateY(100px)'
+        }}>
           <h1>{product.name}</h1>
-         <p>{product.description}</p>
+          <p>{product.description}</p>
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut autem similique consequatur eum eius eveniet ratione! Iste dicta maiores obcaecati quod. Commodi quod cumque amet repellat sint quo accusantium qui voluptate, quam dignissimos minima unde, distinctio reprehenderit, facere corrupti quaerat architecto in quia! Cupiditate nesciunt, dolor repudiandae id, nihil aperiam exercitationem reiciendis commodi fuga officiis maiores accusantium? Officia accusamus optio temporibus repudiandae fuga, eum, rerum dignissimos culpa repellat quisquam atque quaerat dolore neque, reprehenderit hic enim similique. Debitis quis ipsam harum, in veritatis sint laborum unde qui nulla quidem praesentium facere beatae fugiat recusandae iure eos aut impedit omnis sequi?</p> */}
           <button className="buy-now-btn">
             {/* <Link to={`/inquiry?id=${id}`}> */}
