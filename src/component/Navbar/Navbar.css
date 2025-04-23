@@ -303,3 +303,25 @@ body.full-height,
   overflow: hidden !important;
   /* transition: none !important; */
 }
+
+
+@media (max-width: 900px) {
+  .overlayreturnsactive img {
+    width: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 333px) {
+  .overlayreturnsactive img {
+    width: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 370px) {
+  .overlayreturnsactive img {
+    width: 200px;
+    object-fit: cover;
+  }
+}
