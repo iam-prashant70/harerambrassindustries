@@ -217,6 +217,7 @@
 .overlayreturns img {
   animation: okayoverlayimg 0.5s forwards 0.5s;
   opacity: 0;
+  width: 20vw;
 }
 
 @keyframes okayoverlayimg {
@@ -262,6 +263,7 @@
 .overlayreturnsactive img {
   animation: okayoverlayimgactive 1s forwards 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   opacity: 1;
+  width: 20vw;
 }
 
 @keyframes okayoverlayimgactive {
@@ -306,22 +308,28 @@ body.full-height,
 
 
 @media (max-width: 900px) {
-  .overlayreturnsactive img {
-    width: 200px;
+  .overlayreturnsactive img , .overlayreturns img{
+    width: 45vw;
     object-fit: cover;
   }
 }
 
 @media (max-width: 333px) {
-  .overlayreturnsactive img {
-    width: 200px;
+  .overlayreturnsactive img ,.overlayreturns img  {
+    width: 45vw;
+    object-fit: cover;
+  }
+}
+@media (max-width: 320px) {
+  .overlayreturnsactive img ,.overlayreturns img  {
+    width: 45vw;
     object-fit: cover;
   }
 }
 
 @media (max-width: 370px) {
-  .overlayreturnsactive img {
-    width: 200px;
+  .overlayreturnsactive img , .overlayreturns img{
+    width: 45vw;
     object-fit: cover;
   }
 }
