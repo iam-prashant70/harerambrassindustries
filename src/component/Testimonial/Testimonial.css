@@ -3,18 +3,22 @@
     display: flex;
     gap: 2em;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
+
 /* .testimonialsdesign{
     height: 70vh;
 } */
-  
+
 .testimonialstwoholder::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
+    /* Chrome, Safari */
 }
 
-.btnsattestimonialsscoll{
+/* .btnsattestimonialsscoll{
     outline: none;
     border: none;
     border-radius: 10em;
@@ -33,8 +37,58 @@
     background: transparent;
     border: 2.2px solid rgb(92, 92, 92);
     color: rgb(92, 92, 92);
+} */
+
+
+.btnsattestimonialsscoll {
+    outline: none;
+    border: none;
+    border-radius: 10em;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
 }
-.bottomoftestibtns{
+
+.btnactivescroll {
+    background: #ac25eb;
+    color: white;
+}
+
+.btnactivescroll:hover {
+    box-shadow: 0 6px 14px rgba(182, 182, 182, 0.6);
+}
+
+.btnactivescroll:active {
+    transform: scale(0.85);
+}
+
+.btnnotactivescroll {
+    background: transparent;
+    border: 2.2px solid rgb(92, 92, 92);
+    color: rgb(92, 92, 92);
+}
+
+.btnnotactivescroll:hover {
+    background-color: rgba(92, 92, 92, 0.05);
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.3);
+    border: 2.2px solid #ac25eb;
+}
+.btnnotactivescroll:hover svg{
+    color: #ac25eb;
+
+}
+
+.btnnotactivescroll:active {
+    transform: scale(0.85);
+}
+
+
+
+.bottomoftestibtns {
     width: 90vw;
     display: flex;
     justify-content: space-between;
@@ -46,12 +100,13 @@
 
 
 @media (max-width: 333px) {
-    .about-content{
+    .about-content {
         margin-top: 10vh;
     }
 }
+
 @media (max-width: 370px) {
-    .about-content{
+    .about-content {
         margin-top: 10vh;
     }
 }

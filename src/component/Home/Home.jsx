@@ -29,8 +29,8 @@ const Home = () => {
             <section id="about" className="about-section">
                 <div className="containernotworking" style={{ marginTop: "0px" }}>
                     <div className="about-image">
-                        <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
-                        <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
+                        <img src="images/veticalposter.jpg" className='heroimage hroimg1' alt="About Company" />
+                        <img src="images/veticalposter1.jpg" className='heroimage hroimg2' alt="About Company" />
                     </div>
                     <div className="about-content">
                         <div className="about-text">
@@ -44,7 +44,6 @@ const Home = () => {
                                 <Link to="/about">
                                     Learn More
                                 </Link>
-
                             </button>
                         </div>
                     </div>

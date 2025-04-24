@@ -70,11 +70,11 @@ export default function About() {
         style={{
           animationDelay: '0.5s', transform: 'translateY(100px)'
         }}
-        >
+      >
         <div className="containernotworking">
           <div className="about-image">
-            <img src="images/meeting.jpg" className='heroimage hroimg1' alt="About Company" />
-            <img src="images/meeting.jpg" className='heroimage hroimg2' alt="About Company" />
+            <img src="images/veticalposter.jpg" className='heroimage hroimg1' alt="About Company" />
+            <img src="images/veticalposter1.jpg" className='heroimage hroimg2' alt="About Company" />
           </div>
           <div className="about-content" >
             <div className="about-text">

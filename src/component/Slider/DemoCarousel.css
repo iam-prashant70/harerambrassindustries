@@ -2,42 +2,49 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  position: relative;
 }
 
-.carousel-image {
+.carousel-imagediv {
   height: 100vh;
-  width: 1200px;
+  width: 100vw;
+  display: block;
+}
+.carousel-imagediv img{
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   display: block;
-  margin-left: -40px;
 }
 
 .imghereis3 {
-  margin-left: -20px;
+  margin-left: -60px; /* Remove weird shift for cleaner consistency */
+}
+.imghereis2 {
+  margin-left: -40px; /* Remove weird shift for cleaner consistency */
 }
 
-
-
+/* Mobile Optimizations */
 @media (max-width: 900px) {
   .carousel-container {
-    height: 100vh;
-    width: 90vw;
-    overflow: hidden;
+    height: 95vh;
+    width: 100vw;
   }
-}
-
-@media (max-width: 333px) {
-  .carousel-container {
-    height: 100vh;
-    width: 90vw;
-    overflow: hidden;
-  }
+ 
 }
 
 @media (max-width: 370px) {
   .carousel-container {
-    height: 100vh;
-    width: 90vw;
-    overflow: hidden;
+    height: 90vh;
+  }
+  .carousel-imagediv img{
+    height: 100%;
+    object-fit: cover;
+   }
+   .imghereis3 {
+    scale: 0.5;
+  }
+  .imghereis2 {
+    scale: 0.5;
   }
 }

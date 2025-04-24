@@ -1,34 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './DemoCarousel.css'; // ← Import the custom CSS
+import './DemoCarousel.css';
 
 const DemoCarousel = () => {
-    return (
-        <div className="carousel-container">
-            <Carousel
-                autoPlay
-                infiniteLoop
-                emulateTouch
-                showThumbs={false}
-                showStatus={false}
-                showArrows={true}
-                interval={3000}
-                stopOnHover={false}
-                swipeable
-            >
-                <div>
-                    <img src="images/meeting.jpg" alt="Slide 1" className="carousel-image" />
-                </div>
-                <div>
-                    <img src="images/meeting.jpg" alt="Slide 2" className="carousel-image" />
-                </div>
-                <div>
-                    <img src="images/meeting.jpg" alt="Slide 3" className="carousel-image imghereis3" />
-                </div>
-            </Carousel>
-        </div>
-    );
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const desktopImages = [
+    "images/banner1.png",
+    "images/banner2.png",
+    "images/banner3.png"
+  ];
+
+  const mobileImages = [
+    "images/veticalposter.jpg",
+    "images/veticalposter1.jpg",
+    "images/banner3-mobile.png"
+  ];
+
+  const imagesToUse = isMobile ? mobileImages : desktopImages;
+
+  return (
+    <div className="carousel-container">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showThumbs={false}
+        showStatus={false}
+        showArrows={true}
+        interval={3000}
+        stopOnHover={false}
+        swipeable={false}
+        emulateTouch={false}
+      >
+        {imagesToUse.map((img, index) => (
+          <div key={index} className='carousel-imagediv'>
+            <img src={img} alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  );
 };
 
 export default DemoCarousel;

@@ -28,11 +28,10 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4 className="footer-subtitle">Quick Links</h4>
                         <ul className="footer-list">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#products">Products</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/products">Products</Link></li>
+                            <li><Link to="/contactus">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -114,6 +113,10 @@ const Footer = () => {
                     <a href="#">Terms of Service</a>
                     <a href="#">Cookie Policy</a>
                 </div> */}
+                <br />
+                <div className="footer-links">
+                    <Link to="/devs"><i  className="thedevs">Developed by ' Ratnesh ' & ' Prashant  ' </i></Link>
+                </div>
             </div>
             <a href="https://wa.me/9712580007" className="back-to-top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={30} height={30} color={"#ffffff"} fill={"none"} >

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import Navbar from '../../component/Navbar/Navbar';
 import ProductCard from '../../component/ProductCard/ProductCard';
 import './Productsp.css';
-import originalProducts from "../../component/Data/Products";
 import { Link } from 'react-router-dom';
+import AllProducts from '../../component/Data/Allproducts';
 
 
 export default function Productsp() {
@@ -28,7 +28,7 @@ export default function Productsp() {
       <div className="products-page" style={{ marginTop: "40px" }}>
         <h1 className="products-title">Our Products</h1>
         <div className="product_wrapper">
-          {originalProducts.map((product, index) => (
+          {AllProducts.map((product, index) => (
             <div
               key={product.id}
               style={{ animationDelay: `${index * 220}ms` }}
@@ -37,6 +37,7 @@ export default function Productsp() {
               <ProductCard data={product} />
             </div>
           ))}
+        
 
         </div>
       </div>

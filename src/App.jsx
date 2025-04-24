@@ -9,6 +9,7 @@ import Footer from './component/Footer/Footer'
 import ProductDetails from './Pages/Details/ProductDetails'
 import ScrollToTop from './component/Scrolltop/Scrolltotop'
 import Service from './Pages/ServicePage/Service'
+import DevsPage from './Pages/Devs/Devspage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/productdetails/:id" element={<ProductDetails />} />
           <Route path="/services" element={<Service />} />
+          <Route path="/devs" element={<DevsPage />} />
         </Routes>
       <Footer />
 

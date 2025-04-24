@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import "./ProductDetails.css";
-import originalProducts from "../../component/Data/Products";
 import Navbar from '../../component/Navbar/Navbar'
+import AllProducts from "../../component/Data/Allproducts";
+import Products from "../../component/Product/Product";
 
 const ProductDetails = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const foundProduct = originalProducts.find((p) => String(p.id) === id);
+    const foundProduct = AllProducts.find((p) => String(p.id) === id);
     setProduct(foundProduct);
   }, [id]);
 
@@ -43,19 +44,19 @@ const ProductDetails = () => {
 
 
       <div className="product-details-container "
-     
+
       >
 
-        <div className="product-details-image fade-up" 
-         style={{
-          animationDelay: '0.5s', transform: 'translateY(100px)'
-        }}>
+        <div className="product-details-image fade-up"
+          style={{
+            animationDelay: '0.5s', transform: 'translateY(100px)'
+          }}>
           <img src={product.image} alt={product.name} />
         </div>
         <div className="product-details-content fade-up"
-        style={{
-          animationDelay: '0.8s', transform: 'translateY(100px)'
-        }}>
+          style={{
+            animationDelay: '0.8s', transform: 'translateY(100px)'
+          }}>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut autem similique consequatur eum eius eveniet ratione! Iste dicta maiores obcaecati quod. Commodi quod cumque amet repellat sint quo accusantium qui voluptate, quam dignissimos minima unde, distinctio reprehenderit, facere corrupti quaerat architecto in quia! Cupiditate nesciunt, dolor repudiandae id, nihil aperiam exercitationem reiciendis commodi fuga officiis maiores accusantium? Officia accusamus optio temporibus repudiandae fuga, eum, rerum dignissimos culpa repellat quisquam atque quaerat dolore neque, reprehenderit hic enim similique. Debitis quis ipsam harum, in veritatis sint laborum unde qui nulla quidem praesentium facere beatae fugiat recusandae iure eos aut impedit omnis sequi?</p> */}
@@ -67,6 +68,7 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
+      <Products />
 
       <div className="doublequate">
         <svg className="startingquate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ac25eb"} fill={"#ac25eb"}>
