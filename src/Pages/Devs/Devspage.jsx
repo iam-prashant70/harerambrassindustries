@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DevsPage.css';
+import './Devspage.css';
 
 const DevsPage = () => {
     const developers = [
