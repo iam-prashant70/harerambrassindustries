@@ -8,14 +8,14 @@ const DevsPage = () => {
             name: 'Ratnesh Kumawat',
             role: 'Frontend Developer',
             image: 'images/ratu.jpeg',
-            social: 'https://www.instagram.com/_ratnesh.design?igsh=MXF0anlxZ3VneGs=',
+            social: 'https://www.linkedin.com/in/ratnesh-kumawat-6301b425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
             socialnames: '_ratnesh.design'
         },
         {
             name: 'Prashant Maghodiya',
             role: 'Backend Developer',
             image: 'images/papu.jpg',
-            social: 'https://www.instagram.com/iam._.prashant?igsh=MWl6NHF6dXRuYnhheA==',
+            social: 'https://www.linkedin.com/in/prashant-maghodiya-690528343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
             socialnames: 'iam._.prashant'
         }
     ];

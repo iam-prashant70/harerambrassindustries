@@ -24,7 +24,7 @@ const DemoCarousel = () => {
   const mobileImages = [
     "images/veticalposter.jpg",
     "images/veticalposter1.jpg",
-    "images/banner3-mobile.png"
+    "images/bannerm4.jpg"
   ];
 
   const imagesToUse = isMobile ? mobileImages : desktopImages;
@@ -44,7 +44,7 @@ const DemoCarousel = () => {
       >
         {imagesToUse.map((img, index) => (
           <div key={index} className='carousel-imagediv'>
-            <img src={img} alt={`Slide ${index + 1}`} />
+            <img src={img} alt={`Slide ${index + 1}`} className={`imghereis${index + 1}`} />
           </div>
         ))}
       </Carousel>

@@ -10,6 +10,9 @@ import ProductDetails from './Pages/Details/ProductDetails'
 import ScrollToTop from './component/Scrolltop/Scrolltotop'
 import Service from './Pages/ServicePage/Service'
 import DevsPage from './Pages/Devs/Devspage'
+import favicon from '/images/logowhite.png'
+// Then in useEffect or similar:
+document.querySelector("link[rel='icon']").href = favicon
 
 function App() {
 

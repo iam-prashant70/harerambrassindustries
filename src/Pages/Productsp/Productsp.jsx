@@ -2,15 +2,21 @@ import React, { useEffect } from 'react';
 import Navbar from '../../component/Navbar/Navbar';
 import ProductCard from '../../component/ProductCard/ProductCard';
 import './Productsp.css';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import AllProducts from '../../component/Data/Allproducts';
 
 
 export default function Productsp() {
+  
+  const location = useLocation();
 
   useEffect(() => {
     document.title = 'Products | Hareram Brass Industries';
   }, []);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

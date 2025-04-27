@@ -21,11 +21,15 @@ const ProductDetails = () => {
     if (product) {
       document.title = `${product.name} | Hareram Brass Industries`;
     }
-  }, [product]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [product, location]);
 
 
   if (!product) return <p style={{ padding: "20px" }}>Loading product...</p>;
-
 
   return (
     <>
@@ -57,7 +61,7 @@ const ProductDetails = () => {
           style={{
             animationDelay: '0.8s', transform: 'translateY(100px)'
           }}>
-          <h1>{product.name}</h1>
+          <h1 style={{textTransform : "capitalize"}}>{product.name}</h1>
           <p>{product.description}</p>
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut autem similique consequatur eum eius eveniet ratione! Iste dicta maiores obcaecati quod. Commodi quod cumque amet repellat sint quo accusantium qui voluptate, quam dignissimos minima unde, distinctio reprehenderit, facere corrupti quaerat architecto in quia! Cupiditate nesciunt, dolor repudiandae id, nihil aperiam exercitationem reiciendis commodi fuga officiis maiores accusantium? Officia accusamus optio temporibus repudiandae fuga, eum, rerum dignissimos culpa repellat quisquam atque quaerat dolore neque, reprehenderit hic enim similique. Debitis quis ipsam harum, in veritatis sint laborum unde qui nulla quidem praesentium facere beatae fugiat recusandae iure eos aut impedit omnis sequi?</p> */}
           <button className="buy-now-btn">

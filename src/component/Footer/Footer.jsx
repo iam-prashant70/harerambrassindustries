@@ -1,8 +1,18 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Footer = () => {
+
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [location]);
+    
     return (
         <footer className="footer">
             <div className="container" style={{ marginTop: "10vh" }}>
@@ -115,7 +125,7 @@ const Footer = () => {
                 </div> */}
                 <br />
                 <div className="footer-links">
-                    <Link to="/devs"><i  className="thedevs">Developed by ' Ratnesh ' & ' Prashant  ' </i></Link>
+                    <Link to="/devs"><i className="thedevs">Developed by ' Ratnesh ' & ' Prashant  ' </i></Link>
                 </div>
             </div>
             <a href="https://wa.me/9712580007" className="back-to-top">

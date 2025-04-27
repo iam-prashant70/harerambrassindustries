@@ -18,10 +18,13 @@
 }
 
 .imghereis3 {
-  margin-left: -60px; /* Remove weird shift for cleaner consistency */
+  margin-left: -60px; 
 }
 .imghereis2 {
-  margin-left: -40px; /* Remove weird shift for cleaner consistency */
+  margin-left: -40px;
+}
+.imghereis1 {
+  margin-left: -40px;
 }
 
 /* Mobile Optimizations */
@@ -42,9 +45,23 @@
     object-fit: cover;
    }
    .imghereis3 {
-    scale: 0.5;
+    margin-left: -70px; 
   }
   .imghereis2 {
-    scale: 0.5;
+    margin-left: -50px;
+  }
+  .imghereis1 {
+    margin-left: -50px;
+  }
+}
+@media (max-width: 320px) {
+   .imghereis3 {
+    margin-left: -55px; 
+  }
+  .imghereis2 {
+    margin-left: -20px;
+  }
+  .imghereis1 {
+    margin-left: -30px;
   }
 }
