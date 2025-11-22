@@ -40,8 +40,14 @@ const ProductDetails = () => {
       <Navbar /> <br />
       <span className='brudandbread'>
         <div className="divbreaad">
-          <Link to="/">Home</Link> /
-          <Link to="/products">Products</Link> /
+          <Link to="/" className='homebrud'>Home</Link>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0b0b0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+          <Link to="/products"  className='homebrud'>Products</Link>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0b0b0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
           <span className='activeonbread'>{product.name}</span>
         </div>
       </span>
@@ -61,7 +67,7 @@ const ProductDetails = () => {
           style={{
             animationDelay: '0.8s', transform: 'translateY(100px)'
           }}>
-          <h1 style={{textTransform : "capitalize"}}>{product.name}</h1>
+          <h1 style={{ textTransform: "capitalize" }}>{product.name}</h1>
           <p>{product.description}</p>
           {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut autem similique consequatur eum eius eveniet ratione! Iste dicta maiores obcaecati quod. Commodi quod cumque amet repellat sint quo accusantium qui voluptate, quam dignissimos minima unde, distinctio reprehenderit, facere corrupti quaerat architecto in quia! Cupiditate nesciunt, dolor repudiandae id, nihil aperiam exercitationem reiciendis commodi fuga officiis maiores accusantium? Officia accusamus optio temporibus repudiandae fuga, eum, rerum dignissimos culpa repellat quisquam atque quaerat dolore neque, reprehenderit hic enim similique. Debitis quis ipsam harum, in veritatis sint laborum unde qui nulla quidem praesentium facere beatae fugiat recusandae iure eos aut impedit omnis sequi?</p> */}
           <button className="buy-now-btn">

@@ -60,7 +60,10 @@ export default function Service() {
       <Navbar /> <br />
       <span className='brudandbread'>
         <div className="divbreaad">
-          <Link to="/">Home</Link> /
+          <Link to="/" className='homebrud'>Home</Link>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0b0b0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
           <Link to="/services" className='activeonbread'>Services</Link>
         </div>
       </span>
@@ -69,12 +72,12 @@ export default function Service() {
       <section className="servicessection">
         <h1 className="section-title">Our services</h1>
         <div className="servicesCardsec">
-          {features.map((feature , index) => (
+          {features.map((feature, index) => (
             <div key={feature.id} className="servicecards fade-up"
-            style={{
-              animationDelay: `${0.2 + index * 0.2}s`, 
-              transform: 'translateY(60px)',
-            }}
+              style={{
+                animationDelay: `${0.2 + index * 0.2}s`,
+                transform: 'translateY(60px)',
+              }}
             >
               <div className="feature-icon" style={{ marginBottom: "1rem" }}>
                 {feature.icon}
@@ -97,7 +100,7 @@ export default function Service() {
           alignItems: "center",
           animationDelay: '0.5s', transform: 'translateY(100px)'
         }}
-       
+
       >
         <h1 style={{ fontSize: "2rem", marginBottom: "2vh" }}>
           About Our Services

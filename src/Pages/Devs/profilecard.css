@@ -1,0 +1,160 @@
+.card-container {
+  width: 320px;
+  background: white;
+  border-radius: 3em;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.1);
+  overflow: hidden; /* ensures entire card respects rounded edges */
+  position: relative;
+  color: black;
+  padding: 17px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.bg-img-container {
+  width: 100%;
+  height: 130px;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-pic {
+  /* position: absolute; */
+  bottom: -30px;
+  left: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  width: 60px;
+  height: 60px;
+  
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.share-prof{
+  margin-bottom: 3px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+.hedpic{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shareprofile{
+  display: grid;
+  place-items: center;
+  border-radius: 5em;
+  background: #f1f1f1;
+  transform: translateY(-7px);
+  border: 1px solid rgb(177, 177, 177);
+  height: 50px;
+  width: 50px;
+}
+.pic-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+  top: 80px;
+  /* transform: translateY(-35px); */
+}
+.company-tag {
+  /* position: absolute; */
+  height: fit-content;
+  bottom: -15px;
+  right: 20px;
+  color: white;
+  stroke: white;
+  display: flex;
+  align-items: center;
+  background: rgb(104, 81, 253);
+  border-radius: 50px;
+  padding: 13px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.company-logo {
+  width: 20px;
+  margin-right: 6px;
+}
+
+.card-content {
+  /* padding: 40px 20px 20px; */
+  padding: 0 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.role {
+  color: #999;
+  font-size: 14px;
+  margin: 4px 0 16px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.stat-item span {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.cta-button {
+  width: 286px !important;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #333;
+}

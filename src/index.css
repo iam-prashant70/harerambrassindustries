@@ -36,6 +36,7 @@ a{
     text-decoration: none;
     text-transform: capitalize;
     -webkit-user-drag: none;
+    cursor: pointer;
 }
 
 .brudandbread{
@@ -54,9 +55,16 @@ a{
 
 .divbreaad{
     display: flex;
-    gap: 1em;
+    gap: 0.5rem;
+    align-items: center;
     width: fit-content;
-    background: white;
-    border-radius: 0.7em;
-    padding: 1em 2em;
+    /* background: white; */
+    /* border-radius: 0.7em; */
+    /* padding: 1em 2em; */
+}
+.homebrud{
+    color: #b0b0b0 !important;
+}
+.homebrud:hover{
+    text-decoration: underline;
 }

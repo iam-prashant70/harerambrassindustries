@@ -3,6 +3,8 @@ import "./Product.css";
 import ProductCard from "../ProductCard/ProductCard";
 import originalProducts from "../Data/Products";
 import { Link } from "react-router-dom";
+import LazyRender from "../lazyRender";
+
 // import AllProducts from "../Data/Allproducts";
 
 const Products = () => {
@@ -72,7 +74,19 @@ const Products = () => {
         <div className="proslid slider-wrapper" ref={sliderRef}>
           <div className="slider">
             {originalProducts.map((product, index) => (
-              <ProductCard key={index} data={product} />
+              // <ProductCard key={index} data={product} />
+              <LazyRender
+              key={product.id}
+              rootMargin="400px"     // start loading when ~400px away (tweakable)
+              placeholder={<div className="product-card-placeholder" style={{ animationDelay: `${index * 220}ms` }} />}
+            >
+              <div
+                style={{ animationDelay: `${index * 220}ms` }}
+                className="product-card"
+              >
+                <ProductCard data={product} />
+              </div>
+            </LazyRender>
             ))}
           </div>
         </div>
