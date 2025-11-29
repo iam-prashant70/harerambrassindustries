@@ -8,6 +8,7 @@ import Testimonials2 from '../Testimonial/Testimonials2';
 import Contactpage from '../../Pages/Contact/Contactpage';
 import { Link } from 'react-router-dom';
 import DemoCarousel from '../Slider/DemoCarousel';
+import SliderHome from './SliderHome';
 
 const Home = () => {
     return (
@@ -15,7 +16,7 @@ const Home = () => {
 
 
 
-            <div className="overlayreturnsactive" style={{animationDuration : 3}}>
+            <div className="overlayreturnsactive" style={{ animationDuration: 3 }}>
                 <img src="images/logofull.png" alt="loading" />
             </div>
 
@@ -23,8 +24,8 @@ const Home = () => {
             <Navbar />
 
             {/* <HeroSlider /> */}
-
-            <DemoCarousel />
+            <SliderHome />
+            {/* <DemoCarousel /> */}
 
             <section id="about" className="about-section">
                 <div className="containernotworking" style={{ marginTop: "0px" }}>
@@ -160,7 +161,7 @@ const Home = () => {
                 </p>
             </div>
 
-            
+
 
             <Contactpage />
 
